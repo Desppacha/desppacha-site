@@ -5,12 +5,14 @@
 	<title>Desppacha</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/styles.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
 	
 	<!--header -->
 	<header>
-		<img src="assets/images/logo-desppacha.svg" alt="Desppacha">
+		<a href="pagina-inicial.html"><img src="assets/images/logo-desppacha.svg" alt="Desppacha"></a>
 		<div class="menu-header">
 			<ul>
 				<li><a href="mensagens.html">Mensagens</a></li>
@@ -40,8 +42,8 @@
 		<div class="container">
 			<nav>
 				<a href="#">Certificados</a>
-				<a href="#">Preços</a>
-				<a href="#">Tempo de resposta</a>
+				<a href="#" id="precos">Preços</a>
+				<a href="#" id="resposta">Tempo de resposta</a>
 			</nav>
 		</div>
 	</div>
@@ -64,7 +66,7 @@
 			
 			<!--list -->
 			<div class="list">
-				<div class="perfil">
+				<div class="perfil" id="myPerfil">
 					<img src="assets/images/despachantes/foto-1.jpg" alt="">
 					<div class="info-pessoais">
 						<h3>Carlos</h3>
@@ -81,7 +83,7 @@
 						</a>
 					</div>	
 				</div>
-				<div class="perfil">
+				<div class="perfil" id="myPerfil">
 					<img src="assets/images/despachantes/foto-2.jpg" alt="">
 					<div class="info-pessoais">
 						<h3>Camila</h3>
@@ -98,7 +100,7 @@
 						</a>
 					</div>	
 				</div>
-				<div class="perfil">
+				<div class="perfil" id="myPerfil">
 					<img src="assets/images/despachantes/foto-3.jpg" alt="">
 					<div class="info-pessoais">
 						<h3>João</h3>
@@ -116,7 +118,7 @@
 
 			<!--list -->
 			<div class="list">
-				<div class="perfil">
+				<div class="perfil" id="myPerfil">
 					<img src="assets/images/despachantes/foto-4.jpg" alt="">
 					<div class="info-pessoais">
 						<h3>Flávio</h3>
@@ -133,7 +135,7 @@
 						</a>
 					</div>	
 				</div>
-				<div class="perfil">
+				<div class="perfil" id="myPerfil">
 					<img src="assets/images/despachantes/foto-5.jpg" alt="">
 					<div class="info-pessoais">
 						<h3>Luís Henrique</h3>
@@ -150,7 +152,7 @@
 						</a>
 					</div>	
 				</div>
-				<div class="perfil">
+				<div class="perfil" id="myPerfil">
 					<img src="assets/images/despachantes/foto-6.jpg" alt="">
 					<div class="info-pessoais">
 						<h3>Joana</h3>
@@ -168,7 +170,7 @@
 
 			<!--list -->
 			<div class="list">
-				<div class="perfil">
+				<div class="perfil" id="myPerfil">
 					<img src="assets/images/despachantes/foto-7.jpg" alt="">
 					<div class="info-pessoais">
 						<h3>José</h3>
@@ -185,7 +187,7 @@
 						</a>
 					</div>	
 				</div>
-				<div class="perfil">
+				<div class="perfil" id="myPerfil">
 					<img src="assets/images/despachantes/foto-8.jpg" alt="">
 					<div class="info-pessoais">
 						<h3>Yuri</h3>
@@ -202,7 +204,7 @@
 						</a>
 					</div>	
 				</div>
-				<div class="perfil">
+				<div class="perfil" id="myPerfil">
 					<img src="assets/images/despachantes/foto-9.jpg" alt="">
 					<div class="info-pessoais">
 						<h3>Paola</h3>
@@ -225,6 +227,52 @@
 
 		</div>
 	</section>
+	
+
+	<!--The popup despachantes-->
+
+    <div id="popup-despachante" class="popup__wrapper popup__despachantes">
+        <div class="popup__container">
+            <a href="perfil-despachante.html"><img src="assets/images/popup-perfil.jpg" alt=""></a>
+        </div>
+    </div>
+
+    <!--The popup precos-->
+
+    <div id="popup-precos" class="popup__wrapper popup__precos">
+        <div class="popup__container popup___container__precos">
+            <img src="assets/images/filtro-precos.png" alt="">
+        </div>
+    </div>
+
+    <!--The popup tempo resposta-->
+
+    <div id="popup-reposta" class="popup__wrapper popup__resposta">
+        <div class="popup__container popup___container__resposta">
+            <img src="assets/images/popup-tempo-resposta.png" alt="">
+        </div>
+    </div>
+
+	<script>
+		$('#myPerfil').on('click', function(e) {
+		  e.preventDefault();
+		  $('.popup__despachantes').toggleClass('is-visible');
+		});
+	</script>
+
+	<script>
+		$('#precos').on('click', function(e) {
+		  e.preventDefault();
+		  $('.popup__precos').toggleClass('is-visible');
+		});
+	</script>
+
+	<script>
+		$('#resposta').on('click', function(e) {
+		  e.preventDefault();
+		  $('.popup__resposta').toggleClass('is-visible');
+		});
+	</script>
 
 
 

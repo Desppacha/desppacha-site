@@ -408,6 +408,7 @@ header .menu-header ul li a.meuplano:hover{
   flex: 33.33%;
   position: relative;
   margin-bottom: 50px;
+  display: block;
 }
 
 .lista-despachantes .list .perfil .info-pessoais{
@@ -834,9 +835,48 @@ footer {
   min-height: 345px;
 }
 
+#myPerfil{
+  cursor: pointer;
+}
 
+.popup__wrapper {
+    background: rgba(0, 0, 0, .75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
 
+}
 
+.popup__wrapper .popup__container{
+  display: flex;
+  justify-content: center;
+}
+
+.popup__wrapper.is-visible {
+    visibility: visible;
+}
+
+.popup__precos, .popup__resposta{
+  top: 293px;
+}
+
+.popup___container__precos{
+  position: absolute;
+  z-index: 11; 
+  left: 500px;
+}
+
+.popup___container__resposta{
+  position: absolute;
+  z-index: 11; 
+  left: 620px;
+}
 
 
 
